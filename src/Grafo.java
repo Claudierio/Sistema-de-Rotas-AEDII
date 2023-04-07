@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class Grafo {
@@ -23,12 +22,12 @@ public class Grafo {
     }
 	
 	
-	public void adicionarAresta(Cidade origem, Cidade destino, int peso) {
+	public void adicionarAresta(Cidade origem, Cidade destino, int km) {
 	    int i = vertices.indexOf(origem);
 	    int j = vertices.indexOf(destino);
 	    if (i >= 0 && j >= 0) {
-	        matriz[i][j] = peso;
-	        matriz[j][i] = peso;
+	        matriz[i][j] = km;
+	        matriz[j][i] = km;
 	    }
 	}
 	
