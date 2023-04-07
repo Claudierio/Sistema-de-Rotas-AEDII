@@ -28,6 +28,7 @@ public class Grafo {
 	    int j = vertices.indexOf(destino);
 	    if (i >= 0 && j >= 0) {
 	        matriz[i][j] = peso;
+	        matriz[j][i] = peso;
 	    }
 	}
 	
