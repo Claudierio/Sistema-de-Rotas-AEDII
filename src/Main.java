@@ -68,7 +68,7 @@ public class Main {
 		 grafo.adicionarAresta(list.get(49), list.get(30), 18.5); //Agrestina, Batateira
 		 grafo.adicionarAresta(list.get(47), list.get(36), 33.5); //Quipapa, Jaqueira
 		 grafo.adicionarAresta(list.get(30), list.get(35), 21.8); //Batateira, Catende
-		 grafo.adicionarAresta(list.get(336), list.get(35), 14.7);//Jaqueira, Catende
+		 grafo.adicionarAresta(list.get(36), list.get(35), 14.7);//Jaqueira, Catende
 		 grafo.adicionarAresta(list.get(30), list.get(29), 23.6); //Batateira, Bonito
 		 
 		 grafo.floydWarshall();
