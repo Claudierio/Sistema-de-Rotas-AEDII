@@ -17,7 +17,7 @@ public class Repositorio {
         Cidade cidade4 = new Cidade( "Meladinho");
         Cidade cidade5 = new Cidade( "Iati");
         Cidade cidade6 = new Cidade( "Aguas Belas");
-        Cidade cidade7 = new Cidade( "Aliança");
+        Cidade cidade7 = new Cidade( "Santo Antônio");
         Cidade cidade8 = new Cidade( "Garcia");
         Cidade cidade9 = new Cidade( "Japecanga");
         Cidade cidade10 = new Cidade( "Tarci");
@@ -60,7 +60,7 @@ public class Repositorio {
         Cidade cidade47 = new Cidade( "Quipapá");
         Cidade cidade48 = new Cidade( "Panelas");
         Cidade cidade49 = new Cidade( "Agrestina");
-        Cidade cidade50 = new Cidade( "Santo Antônio");
+        
         
         lista.add(cidade0);
         lista.add(cidade1);
@@ -112,8 +112,7 @@ public class Repositorio {
         lista.add(cidade47);
         lista.add(cidade48);
         lista.add(cidade49);
-        lista.add(cidade50);
-        
+
 
     }
 }
