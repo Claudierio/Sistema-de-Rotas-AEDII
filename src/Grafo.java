@@ -78,10 +78,12 @@ public class Grafo {
 	    if (matriz[i][j] == INF) {
 	        System.out.println("Não há caminho entre " + origem.getNome() + " e " + destino.getNome());
 	    } else {
+	    	System.out.println("Viagem de " + origem.getNome() + " para " + destino.getNome() + "\n");
 	        caminho += origem.getNome();
 	        while (i != j) {
 	            i = proximo[i][j];
 	            caminho += " -> " + vertices.get(i).getNome();
+	            
 	        }
 	        System.out.println("Caminho: " + caminho);
 	        System.out.println("Distância: " + matriz[vertices.indexOf(origem)][vertices.indexOf(destino)] + " Km");

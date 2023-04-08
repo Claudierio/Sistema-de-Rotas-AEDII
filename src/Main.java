@@ -29,7 +29,7 @@ public class Main {
 		 grafo.adicionarAresta(list.get(11), list.get(12), 12); // Venturosa, Pedra
 		 grafo.adicionarAresta(list.get(12), list.get(13), 19); // Pedra, Arcoverde
 		 grafo.adicionarAresta(list.get(13), list.get(15), 27); // Arcoverde, Buíque
-		 grafo.adicionarAresta(list.get(10), list.get(50), 49); // Tarci, Santo Antônio
+		 grafo.adicionarAresta(list.get(10), list.get(7), 49); // Tarci, Santo Antônio
 		 grafo.adicionarAresta(list.get(7), list.get(9), 75); // Santo Antônio, Japecanga
 		 grafo.adicionarAresta(list.get(9), list.get(8), 17); // Japecanga, Garcia
 		 grafo.adicionarAresta(list.get(8), list.get(6), 19); // Garcia, Aguas Belas
@@ -39,8 +39,7 @@ public class Main {
 		 
 		 grafo.floydWarshall();
 		
-		System.out.println("Viagem de " + list.get(0).getNome() + " para " + list.get(1).getNome() + "\n");
-		grafo.imprimirMenorCaminho(list.get(0), list.get(3));
+		grafo.imprimirMenorCaminho(list.get(15), list.get(3));
 		
 
 	}
