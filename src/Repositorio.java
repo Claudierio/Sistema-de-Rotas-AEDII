@@ -9,8 +9,6 @@ public class Repositorio {
     }
     
     public void bancoCidades(){
-        //Inicializando o repositorio com o banco de dados de todas as cidades
-        //this.lista= new ArrayList<Cidade>();
 
         Cidade cidade0 = new Cidade("Garanhuns");
         Cidade cidade1 = new Cidade( "Paranatama");

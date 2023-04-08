@@ -3,18 +3,27 @@ import java.util.List;
 
 public class Grafo {
 
-	private int[][] matriz;
+	private double[][] matriz;
+	private int[][] proximo;
     private List<Cidade> vertices;
     
     private int numeroVertices;
+    double INF = 9999;
 
 	public Grafo(int numeroVertices) {
 		this.numeroVertices = numeroVertices;
 		this.vertices = new ArrayList<Cidade>(numeroVertices);
-		this.matriz = new int[numeroVertices][numeroVertices];
-		for(int i=0; i<numeroVertices; i++) {
-            this.matriz[i][i] = 0;
-        }
+		this.matriz = new double[numeroVertices][numeroVertices];
+		this.proximo = new int[numeroVertices][numeroVertices];
+		for (int i = 0; i < numeroVertices; i++) {
+		    for (int j = 0; j < numeroVertices; j++) {
+		        if (i == j) {	    
+		            matriz[i][j] = 0;
+		        } else {
+		            matriz[i][j] = INF;
+		        }
+		    }
+		}
 	}
     
 	public void adicionarVertice(Cidade c) {
@@ -22,7 +31,7 @@ public class Grafo {
     }
 	
 	
-	public void adicionarAresta(Cidade origem, Cidade destino, int km) {
+	public void adicionarAresta(Cidade origem, Cidade destino, double km) {
 	    int i = vertices.indexOf(origem);
 	    int j = vertices.indexOf(destino);
 	    if (i >= 0 && j >= 0) {
@@ -40,36 +49,50 @@ public class Grafo {
 	    }
 	}
 	
-	public int[][] floydWarshall() {
-	    int[][] distancias = new int[numeroVertices][numeroVertices];
-
+	public void floydWarshall() {
 	    for (int i = 0; i < numeroVertices; i++) {
 	        for (int j = 0; j < numeroVertices; j++) {
-	            distancias[i][j] = matriz[i][j];
+	            if (matriz[i][j] != INF) {
+	                proximo[i][j] = j;
+	            }
 	        }
 	    }
-
+	    
 	    for (int k = 0; k < numeroVertices; k++) {
 	        for (int i = 0; i < numeroVertices; i++) {
 	            for (int j = 0; j < numeroVertices; j++) {
-	                if (distancias[i][k] + distancias[k][j] < distancias[i][j]) {
-	                	
-	                    distancias[i][j] = distancias[i][k] + distancias[k][j];
+	                if (matriz[i][k] + matriz[k][j] < matriz[i][j]) {
+	                    matriz[i][j] = matriz[i][k] + matriz[k][j];
+	                    proximo[i][j] = proximo[i][k];
 	                }
 	            }
 	        }
 	    }
-
-	    return distancias;
 	}
 
+	public void imprimirMenorCaminho(Cidade origem, Cidade destino) {
+	    int i = vertices.indexOf(origem);
+	    int j = vertices.indexOf(destino);
+	    String caminho = "";
 
+	    if (matriz[i][j] == INF) {
+	        System.out.println("Não há caminho entre " + origem.getNome() + " e " + destino.getNome());
+	    } else {
+	        caminho += origem.getNome();
+	        while (i != j) {
+	            i = proximo[i][j];
+	            caminho += " -> " + vertices.get(i).getNome();
+	        }
+	        System.out.println("Caminho: " + caminho);
+	        System.out.println("Distância: " + matriz[vertices.indexOf(origem)][vertices.indexOf(destino)] + " Km");
+	    }
+	}
 
-	public int[][] getMatriz() {
+	public double[][] getMatriz() {
 		return matriz;
 	}
 
-	public void setMatriz(int[][] matriz) {
+	public void setMatriz(double[][] matriz) {
 		this.matriz = matriz;
 	}
 
