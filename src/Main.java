@@ -26,7 +26,9 @@ public class Main {
 
 		 grafo.floydWarshall();
 		
+		System.out.println("Viagem de " + list.get(0).getNome() + " para " + list.get(1).getNome() + "\n");
 		grafo.imprimirMenorCaminho(list.get(0), list.get(3));
+		
 
 	}
 
