@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Main {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		
 		Repositorio repositorio = new Repositorio();
@@ -34,48 +35,53 @@ public class Main {
 		 grafo.adicionarAresta(list.get(9), list.get(8), 17.4);   // Japecanga, Garcia
 		 grafo.adicionarAresta(list.get(8), list.get(6), 28.4);   // Garcia, Aguas Belas
 		 grafo.adicionarAresta(list.get(6), list.get(5), 29.6);   // Aguas Belas, Iati
-		 grafo.adicionarAresta(list.get(0), list.get(33), 16.3);  //Garanhuns, Joao Joao
-		 grafo.adicionarAresta(list.get(33), list.get(32), 11.1); //Sao joao, Angelin
-		 grafo.adicionarAresta(list.get(32), list.get(45), 5.8);  //Angelin, Palmerina
-		 grafo.adicionarAresta(list.get(45), list.get(42), 35.7); //palmerina, correntes
-		 grafo.adicionarAresta(list.get(0), list.get(46), 28.9);  //Garanhuns, Iratama
-		 grafo.adicionarAresta(list.get(46), list.get(43), 24.0); //Iratama, lagoa do ouro
-		 grafo.adicionarAresta(list.get(46), list.get(44), 17.1); //Lagoa do ouro, Barra do brejo
-		 grafo.adicionarAresta(list.get(46), list.get(42), 15.8); //Lagoa ouro, Correntes
-		 grafo.adicionarAresta(list.get(42), list.get(40), 16.2); // coorentes, santana
-		 grafo.adicionarAresta(list.get(40), list.get(38), 26.3); //santana, uniao
-		 grafo.adicionarAresta(list.get(38), list.get(37), 32.7); //uniao, serra grande
-		 grafo.adicionarAresta(list.get(32), list.get(31), 13.4); //angelin, Canhotinho
-		 grafo.adicionarAresta(list.get(31), list.get(47), 27.4); //Canhotinho, quipapa
-		 grafo.adicionarAresta(list.get(37), list.get(47), 26.1); //serra grande, quipapa
-		 grafo.adicionarAresta(list.get(31), list.get(20), 33.3); // Canhorinho, lajedo
-		 grafo.adicionarAresta(list.get(0), list.get(24), 18.6);  //garanhuns, batinga
-		 grafo.adicionarAresta(list.get(25), list.get(21), 5.6);  //baatinga, jupi
-		 grafo.adicionarAresta(list.get(21), list.get(20), 13.7); //Jupi, lajedo
-		 grafo.adicionarAresta(list.get(20), list.get(23), 41.6); //Jupi,Juerma
-		 grafo.adicionarAresta(list.get(16), list.get(17), 5.9);  //caetes, capoeiras
-		 grafo.adicionarAresta(list.get(17), list.get(18), 33.);  // capoeiras, sao bento
-		 grafo.adicionarAresta(list.get(18), list.get(19), 12.1); //sao bento, queimada grande
-		 grafo.adicionarAresta(list.get(19), list.get(20), 8.7);  //queimada grande, lajedo
-		 grafo.adicionarAresta(list.get(20), list.get(26), 21.8); //lajedo, cachoeirinha
-		 grafo.adicionarAresta(list.get(20), list.get(25), 23.0); //Ibirajuba, Lajedo
-		 grafo.adicionarAresta(list.get(25), list.get(27), 17.8); //Ibirajuba, Altinho
-		 grafo.adicionarAresta(list.get(27), list.get(49), 15.0); //Altinho, Agrestina
-		 grafo.adicionarAresta(list.get(23), list.get(48), 21.2); //Jurama, panelas
-		 grafo.adicionarAresta(list.get(23), list.get(28), 12.8); //Panelas, Cupira
-		 grafo.adicionarAresta(list.get(23), list.get(49), 18.7); //cupira, agrestina
-		 grafo.adicionarAresta(list.get(47), list.get(48), 22.2); //Quipapa, Panelas
-		 grafo.adicionarAresta(list.get(49), list.get(30), 18.5); //Agrestina, Batateira
-		 grafo.adicionarAresta(list.get(47), list.get(36), 33.5); //Quipapa, Jaqueira
-		 grafo.adicionarAresta(list.get(30), list.get(35), 21.8); //Batateira, Catende
-		 grafo.adicionarAresta(list.get(36), list.get(35), 14.7);//Jaqueira, Catende
-		 grafo.adicionarAresta(list.get(30), list.get(29), 23.6); //Batateira, Bonito
+		 grafo.adicionarAresta(list.get(0), list.get(33), 16.3);  // Garanhuns, Joao Joao
+		 grafo.adicionarAresta(list.get(33), list.get(32), 11.1); // Sao joao, Angelim
+		 grafo.adicionarAresta(list.get(32), list.get(45), 5.8);  // Angelim, Palmerina
+		 grafo.adicionarAresta(list.get(45), list.get(42), 35.7); // Palmerina, Correntes
+		 grafo.adicionarAresta(list.get(0), list.get(46), 28.9);  // Garanhuns, Iratama
+		 grafo.adicionarAresta(list.get(46), list.get(43), 24.0); // Iratama, Lagoa do Ouro
+		 grafo.adicionarAresta(list.get(46), list.get(44), 17.1); // Lagoa do Ouro, Barra do Brejo
+		 grafo.adicionarAresta(list.get(46), list.get(42), 15.8); // Lagoa ouro, Correntes
+		 grafo.adicionarAresta(list.get(42), list.get(40), 16.2); // Coorentes, Santana
+		 grafo.adicionarAresta(list.get(40), list.get(38), 26.3); // Santana, União
+		 grafo.adicionarAresta(list.get(38), list.get(37), 32.7); // União, Serra Grande
+		 grafo.adicionarAresta(list.get(32), list.get(31), 13.4); // Angelim, Canhotinho
+		 grafo.adicionarAresta(list.get(31), list.get(47), 27.4); // Canhotinho, Quipapá
+		 grafo.adicionarAresta(list.get(37), list.get(47), 26.1); // Serra Grande, Quipapá
+		 grafo.adicionarAresta(list.get(31), list.get(20), 33.3); // Canhorinho, Lajedo
+		 grafo.adicionarAresta(list.get(0), list.get(24), 18.6);  // Garanhuns, Batinga
+		 grafo.adicionarAresta(list.get(24), list.get(21), 5.6);  // Batinga, Jupi
+		 grafo.adicionarAresta(list.get(21), list.get(20), 13.7); // Jupi, Lajedo
+		 grafo.adicionarAresta(list.get(21), list.get(23), 41.6); // Jupi, Jurema
+		 grafo.adicionarAresta(list.get(16), list.get(17), 5.9);  // Caetés, Capoeiras
+		 grafo.adicionarAresta(list.get(17), list.get(18), 33.);  // Capoeiras, São Bento
+		 grafo.adicionarAresta(list.get(18), list.get(19), 12.1); // São Bento, Queimada Grande
+		 grafo.adicionarAresta(list.get(19), list.get(20), 8.7);  // Queimada Grande, Lajedo
+		 grafo.adicionarAresta(list.get(20), list.get(26), 21.8); // Lajedo, Cachoeirinha
+		 grafo.adicionarAresta(list.get(20), list.get(25), 23.0); // Ibirajuba, Lajedo
+		 grafo.adicionarAresta(list.get(25), list.get(27), 17.8); // Ibirajuba, Altinho
+		 grafo.adicionarAresta(list.get(27), list.get(49), 15.0); // Altinho, Agrestina
+		 grafo.adicionarAresta(list.get(23), list.get(48), 21.2); // Jurama, Panelas
+		 grafo.adicionarAresta(list.get(23), list.get(28), 12.8); // Panelas, Cupira
+		 grafo.adicionarAresta(list.get(23), list.get(49), 18.7); // Cupira, Agrestina
+		 grafo.adicionarAresta(list.get(47), list.get(48), 22.2); // Quipapá, Panelas
+		 grafo.adicionarAresta(list.get(49), list.get(30), 18.5); // Agrestina, Batateira
+		 grafo.adicionarAresta(list.get(47), list.get(36), 33.5); // Quipapá, Jaqueira
+		 grafo.adicionarAresta(list.get(30), list.get(35), 21.8); // Batateira, Catende
+		 grafo.adicionarAresta(list.get(36), list.get(35), 14.7); // Jaqueira, Catende
+		 grafo.adicionarAresta(list.get(30), list.get(29), 23.6); // Batateira, Bonito
 		 
 		 grafo.floydWarshall();
 		
-		grafo.imprimirMenorCaminho(list.get(15), list.get(3));
-		grafo.calcularValorViagem(list.get(15), list.get(3));
-		
+		 //Cidade a = Cidade.findBy("Garanhuns", list);
+			
+		//System.out.println(a.getNome());
+		//grafo.imprimirMenorCaminho(list.get(15), list.get(3));
+		//grafo.calcularValorViagem(list.get(15), list.get(3));
+		 Cidade origem = list.get(0);
+		 View v = new View();
+	     v.menu(grafo, list);
 
 	}
 

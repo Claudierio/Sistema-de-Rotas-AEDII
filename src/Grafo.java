@@ -25,6 +25,10 @@ public class Grafo {
 		    }
 		}
 	}
+	
+	public int getIndiceVertice(Cidade c) {
+        return this.vertices.indexOf(c);
+    }
     
 	public void adicionarVertice(Cidade c) {
         this.vertices.add(c);
@@ -69,7 +73,31 @@ public class Grafo {
 	        }
 	    }
 	}
+	
+	public void calcularValorViagem(Cidade origem, Cidade destino) {
+	    int i = vertices.indexOf(origem);
+	    int j = vertices.indexOf(destino);
+	    double valor = 0.0;
 
+        while (i != j) {
+            if (i == 0) {
+                valor += matriz[i][proximo[i][j]];
+            } else {
+                valor += matriz[i-1][i];
+            }
+            i = proximo[i][j];
+        }
+        valor = 0.5 * matriz[vertices.indexOf(origem)][vertices.indexOf(destino)];
+        System.out.printf("Valor da viagem: R$ %.2f", valor);
+	    
+	}
+	
+	public void imprimirCidades() {
+        for(Cidade c: this.vertices)
+            System.out.println(getIndiceVertice(c) + " - " + c.getNome());
+    }
+
+	
 	public void imprimirMenorCaminho(Cidade origem, Cidade destino) {
 	    int i = vertices.indexOf(origem);
 	    int j = vertices.indexOf(destino);
@@ -86,29 +114,13 @@ public class Grafo {
 	            
 	        }
 	        System.out.println("Caminho: " + caminho);
-	        System.out.println("Distância: " + matriz[vertices.indexOf(origem)][vertices.indexOf(destino)] + " Km");
+	        System.out.printf("Distância: %.2f Km\n", matriz[vertices.indexOf(origem)][vertices.indexOf(destino)]);
+	        calcularValorViagem(origem, destino);
+	        System.out.println();
+
 	    }
 	}
 	
-	public void calcularValorViagem(Cidade origem, Cidade destino) {
-	    int i = vertices.indexOf(origem);
-	    int j = vertices.indexOf(destino);
-	    double valor = 0.0;
-
-        while (i != j) {
-            if (i == 0) {
-                valor += matriz[i][proximo[i][j]];
-            } else {
-                valor += matriz[i-1][i];
-            }
-            i = proximo[i][j];
-        }
-        valor = 0.5 * matriz[vertices.indexOf(origem)][vertices.indexOf(destino)];
-        System.out.println("Valor da viagem: R$" + valor);
-	    
-	}
-
-
 	public double[][] getMatriz() {
 		return matriz;
 	}
