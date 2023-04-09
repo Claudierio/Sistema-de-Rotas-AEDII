@@ -74,6 +74,7 @@ public class Main {
 		 grafo.floydWarshall();
 		
 		grafo.imprimirMenorCaminho(list.get(15), list.get(3));
+		grafo.calcularValorViagem(list.get(15), list.get(3));
 		
 
 	}

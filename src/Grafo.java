@@ -89,6 +89,25 @@ public class Grafo {
 	        System.out.println("Distância: " + matriz[vertices.indexOf(origem)][vertices.indexOf(destino)] + " Km");
 	    }
 	}
+	
+	public void calcularValorViagem(Cidade origem, Cidade destino) {
+	    int i = vertices.indexOf(origem);
+	    int j = vertices.indexOf(destino);
+	    double valor = 0.0;
+
+        while (i != j) {
+            if (i == 0) {
+                valor += matriz[i][proximo[i][j]];
+            } else {
+                valor += matriz[i-1][i];
+            }
+            i = proximo[i][j];
+        }
+        valor = 0.5 * matriz[vertices.indexOf(origem)][vertices.indexOf(destino)];
+        System.out.println("Valor da viagem: R$" + valor);
+	    
+	}
+
 
 	public double[][] getMatriz() {
 		return matriz;
