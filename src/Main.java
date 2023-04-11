@@ -74,8 +74,7 @@ public class Main {
 		 
 		 
 		 grafo.floydWarshall();
-		 
-		 Cidade origem = list.get(0);
+
 		 View v = new View();
 	     v.menu(grafo, list);
 

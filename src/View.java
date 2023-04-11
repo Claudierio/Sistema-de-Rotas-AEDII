@@ -13,7 +13,8 @@ public class View {
         Boolean continuar = true;
         
         while(continuar){
-        	System.out.println("\n1 - Imprimir cidades");
+        	System.out.println("\nSistema de Recomendação de rotas\n");
+        	System.out.println("1 - Imprimir cidades");
         	System.out.println("2 - Imprimir a Matriz");
             System.out.println("3 - Escolher a viagem");
             System.out.println("0 - Sair");
