@@ -8,6 +8,6 @@ Projeto que consiste em mapear um sistema de rotas mais rápidas e eficazes para
 [Java](https://www.java.com/en/download/)
 *   java version "1.8.0_51"
 
-## Nossa Branchs
+## Nossa Branch
 Branch “main”, contém todo Back-End.
 
