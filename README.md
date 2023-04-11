@@ -11,3 +11,5 @@ Projeto que consiste em mapear um sistema de rotas mais rápidas e eficazes para
 ## Nossa Branch
 Branch “main”, contém todo Back-End.
 
+## Como usar 
+Para rodar nosso programa é simples, basta acessar a main e dar "run" 
