@@ -71,7 +71,10 @@ public class Main {
 		 grafo.adicionarAresta(list.get(30), list.get(35), 21.8); // Batateira, Catende
 		 grafo.adicionarAresta(list.get(36), list.get(35), 14.7); // Jaqueira, Catende
 		 grafo.adicionarAresta(list.get(30), list.get(29), 23.6); // Batateira, Bonito
-		 
+		 grafo.adicionarAresta(list.get(26), list.get(25), 29.7); // Cachoeirinha, Ibirajuba
+		 grafo.adicionarAresta(list.get(22), list.get(20), 10.3); // Jacaré, Lajedo
+		 grafo.adicionarAresta(list.get(22), list.get(23), 28.4); // Jacaré, Jurema
+		 grafo.adicionarAresta(list.get(22), list.get(21), 28.4); // Jacar, Jupi
 		 
 		 grafo.floydWarshall();
 
