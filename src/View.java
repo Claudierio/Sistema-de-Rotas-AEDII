@@ -4,15 +4,18 @@ import java.util.Scanner;
 
 public class View {
 
-    public void menu(Grafo grafo, ArrayList<Cidade> list){
+    private Scanner scan;
+
+	public void menu(Grafo grafo, ArrayList<Cidade> list){
         
-        @SuppressWarnings("resource")
-		Scanner scan = new Scanner(System.in);
+        
+		scan = new Scanner(System.in);
         Boolean continuar = true;
         
         while(continuar){
         	System.out.println("\n1 - Imprimir cidades");
-            System.out.println("2 - Escolher o destino");
+        	System.out.println("2 - Imprimir a Matriz");
+            System.out.println("3 - Escolher a viagem");
             System.out.println("0 - Sair");
 
             int opcao = scan.nextInt();
@@ -22,9 +25,12 @@ public class View {
             		System.out.println("");
                     grafo.imprimirCidades();
             		break;
-                case 2:
+            	case 2:
+            		System.out.println("");
+                    grafo.imprimirMatriz();
+            		break;
+                case 3:
 
-                   
                     Scanner texto = new Scanner(System.in);
                     String str = null;
                     String str1 = null;
@@ -33,11 +39,8 @@ public class View {
                     
                     System.out.println("Informe o nome da cidade de origem: ");
                     str = texto.nextLine();
-                    
-
-                    System.out.println("Informe o nome da cidade de origem: ");
+                    System.out.println("Informe o nome da cidade de destino: ");
                     str1 = texto.nextLine();
-                    
                     
                     grafo.imprimirMenorCaminho(Cidade.findByCidade(str, list), Cidade.findByCidade(str1, list));
                     break;

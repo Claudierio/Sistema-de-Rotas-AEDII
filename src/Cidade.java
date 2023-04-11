@@ -21,8 +21,7 @@ public class Cidade implements Comparable<Cidade> {
         for (Cidade cidade : cidades) {
             if (cidade.nome.equals(nome)) {
                 return cidade;
-            }
-            
+            }       
         }
 		return null;
     }

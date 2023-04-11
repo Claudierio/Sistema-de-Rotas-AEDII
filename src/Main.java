@@ -72,13 +72,9 @@ public class Main {
 		 grafo.adicionarAresta(list.get(36), list.get(35), 14.7); // Jaqueira, Catende
 		 grafo.adicionarAresta(list.get(30), list.get(29), 23.6); // Batateira, Bonito
 		 
+		 
 		 grafo.floydWarshall();
-		
-		 //Cidade a = Cidade.findBy("Garanhuns", list);
-			
-		//System.out.println(a.getNome());
-		//grafo.imprimirMenorCaminho(list.get(15), list.get(3));
-		//grafo.calcularValorViagem(list.get(15), list.get(3));
+		 
 		 Cidade origem = list.get(0);
 		 View v = new View();
 	     v.menu(grafo, list);

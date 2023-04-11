@@ -8,7 +8,7 @@ public class Grafo {
     private List<Cidade> vertices;
     
     private int numeroVertices;
-    double INF = 9999;
+    double INF = Double.POSITIVE_INFINITY;
 
 	public Grafo(int numeroVertices) {
 		this.numeroVertices = numeroVertices;
